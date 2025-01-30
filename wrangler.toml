@@ -1,3 +1,12 @@
-kv_namespaces = [
-  { id = "MY_KV", binding="MY_KV" }
-]
+compatibility_date = "2025-01-30"
+
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "."
+
+[site]
+bucket = "./build/client"
+
+[env.production]
+pages_build_output_dir = "./build/client"
